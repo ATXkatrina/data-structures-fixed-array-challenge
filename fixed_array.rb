@@ -5,6 +5,7 @@ class FixedArray
   end
 
   def get(index)
+    raise OutofBoundsException if index > @a.length
     return @a[index]
   end
 
@@ -12,4 +13,11 @@ class FixedArray
     @a[index] = element
   end
 
+  def length
+    @a.length
+  end
+
+end
+
+class OutofBoundsException < StandardError
 end
