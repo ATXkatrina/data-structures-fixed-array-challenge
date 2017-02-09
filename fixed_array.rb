@@ -10,6 +10,7 @@ class FixedArray
   end
 
   def set(index, element)
+    raise OutofBoundsException if index > @a.length
     @a[index] = element
   end
 
