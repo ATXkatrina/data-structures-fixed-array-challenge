@@ -2,9 +2,6 @@ require_relative 'fixed_array'
 
 describe FixedArray do
   let(:test) { FixedArray.new(3) }
-    # before do
-    #   test.set(0, 'word test')
-    # end
 
   it "returns an object with an array of n length" do
     expect(test.length).to eq(3)
@@ -18,6 +15,9 @@ describe FixedArray do
   end
 
   describe ".get" do
+    # before :all do
+    #   test.set(0, 'word test')
+    # end
     it "retrieves the n index from the fixed array" do
       # expect(test.get(0)).to be('word test')
       expect(test.get(1)).to be_nil
@@ -26,6 +26,9 @@ describe FixedArray do
   end
 
   describe ".length" do
+    it "returns the total number of values in the array" do
+      expect(test.length).to be(3)
+    end
   end
 
 end
